@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WASP_Planner.JsonConverter;
 
 namespace WASP_Planner
 {
@@ -24,23 +25,31 @@ namespace WASP_Planner
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Dictionary<DateTime, string> events = new Dictionary<DateTime, string>();
+        private Dictionary<DateTime, string> events = new Dictionary<DateTime, string>() { { new DateTime(2002, 02, 20), "Пасхалка" }};
+        private static readonly JsonSerializerOptions options = new JsonSerializerOptions
+        {
+            Converters =
+            {
+                new DictionaryJsonConverter()
+            }
+        };
         public MainWindow()
         {
             InitializeComponent();
             if (File.Exists("Events.json"))
             {
+                //File.Delete("Events.json");
                 using (FileStream stream = new FileStream("Events.json", FileMode.Open))
                 {
                     byte[] buffer = new byte[stream.Length];
                     stream.Read(buffer, 0, buffer.Length);
                     string bufferText = Encoding.Default.GetString(buffer);
-                    events = JsonSerializer.Deserialize<Dictionary<DateTime, string>>(bufferText);
+                    events = JsonSerializer.Deserialize<Dictionary<DateTime, string>>(bufferText, options);
                 }
             }
             else
             {
-                string serializedEvents = JsonSerializer.Serialize(events);
+                string serializedEvents = JsonSerializer.Serialize(events, options);
                 using (FileStream stream = new FileStream("Events.json", FileMode.Create))
                 {
                     byte[] buffer = Encoding.Default.GetBytes(serializedEvents);
@@ -91,6 +100,33 @@ namespace WASP_Planner
             if (selectedDate.HasValue)
             {
                 DateTextBlock.Text = selectedDate.Value.ToString("D", CultureInfo.GetCultureInfo("ru-RU"));
+                bool f = false;
+                foreach (DateTime d in events.Keys)
+                {
+                    if (d.ToString("D") == selectedDate.Value.ToString("D"))
+                    {
+                        f = true;
+                        break;
+                    }
+                }
+                if (f)
+                {
+                    List<DateTime> bufferDates = new List<DateTime>();
+                    foreach (DateTime d in events.Keys)
+                    {
+                        if (d.ToString("D") == selectedDate.Value.ToString("D"))
+                        {
+                            bufferDates = bufferDates.Append(d).ToList();
+                        }
+                    }
+                    foreach(DateTime d in bufferDates)
+                    {
+                        eventsStackPanel.Children.Add(new TextBlock() 
+                        {
+                            Text = $"{d.ToString("t", CultureInfo.GetCultureInfo("ru-RU"))}: {events[d]}"
+                        });
+                    }
+                }
             }
         }
     }

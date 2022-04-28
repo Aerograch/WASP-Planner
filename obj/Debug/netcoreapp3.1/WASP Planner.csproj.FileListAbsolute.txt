@@ -17,3 +17,6 @@ C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1
 C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner.dll
 C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner.pdb
 C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner.genruntimeconfig.cache
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner.csproj.AssemblyReference.cache
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\EvetAdderWindow.g.cs
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\EvetAdderWindow.baml

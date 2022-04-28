@@ -5,19 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WASP_Planner"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="#FF001240" Foreground="#FF001D68">
+        Title="MainWindow" Height="450" Width="800" Background="#FF001240" Foreground="#FF001D68" ResizeMode="NoResize">
     <Grid x:Name="mainGrid" SizeChanged="onGridResize">
-        <Border BorderThickness="1" Margin="10,30,0,0" Background="#FFE0E9FF" VerticalAlignment="Top" Height="364" HorizontalAlignment="Left" Width="250" SizeChanged="onBorderResize">
-            <Border BorderThickness="1" Margin="9,9,0,0" Background="#FF0B1C48" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="230" SizeChanged="onBorderResize">
-                <TextBlock HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="White" Text="Активность друзей" FontSize="15" FontFamily="Segoe UI" FontWeight="Normal" Margin="5,1,0,0" FontStyle="Normal" TextDecorations="{x:Null}"/>
-            </Border>
+        <Border BorderThickness="1" Margin="10,30,0,0" Background="#FFE0E9FF" VerticalAlignment="Top" Height="329" HorizontalAlignment="Left" Width="250" SizeChanged="onBorderResize">
+            <Grid x:Name="ActivityGrid" Margin="0,0,0,-1">
+                <Border BorderThickness="1" Margin="9,9,0,0" Background="#FF0B1C48" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="230" SizeChanged="onBorderResize">
+                    <TextBlock x:Name="test" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="White" Text="Активность друзей" FontSize="15" FontFamily="Segoe UI" FontWeight="Normal" Margin="5,1,0,0" FontStyle="Normal" TextDecorations="{x:Null}"/>
+                </Border>
+                <ScrollViewer Margin="10,41,10,10">
+                    <StackPanel x:Name="actionsStackPanel">
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
         </Border>
-        <Border BorderThickness="1" Margin="280,30,0,0" Background="#FFE0E9FF" HorizontalAlignment="Left" VerticalAlignment="Top" Width="230" Height="364" SizeChanged="onBorderResize">
-            <Border BorderThickness="1" Margin="9,9,0,0" Background="#FF0B1C48" HorizontalAlignment="Left" VerticalAlignment="Top" Width="212" Height="27" SizeChanged="onBorderResize">
-                <TextBlock x:Name="DateTextBlock" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Foreground="LightGray" Text="Активность друзей" FontSize="15" FontFamily="Segoe UI" FontWeight="Normal" Margin="6,1,0,0" FontStyle="Normal" TextDecorations="{x:Null}" Initialized="OnDateTextBlockInitialized"/>
-            </Border>
+        <Border BorderThickness="1" Margin="280,30,0,0" Background="#FFE0E9FF" HorizontalAlignment="Left" VerticalAlignment="Top" Width="230" Height="371" SizeChanged="onBorderResize">
+            <Grid x:Name="eventsGrid" Margin="0,0,-1,-1">
+                <Border BorderThickness="1" Margin="9,9,0,0" Background="#FF0B1C48" HorizontalAlignment="Left" VerticalAlignment="Top" Width="212" Height="27" SizeChanged="onBorderResize">
+                    <TextBlock x:Name="DateTextBlock" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Foreground="LightGray" Text="Дата" FontSize="15" FontFamily="Segoe UI" FontWeight="Normal" Margin="6,1,0,0" FontStyle="Normal" TextDecorations="{x:Null}" Initialized="OnDateTextBlockInitialized"/>
+                </Border>
+                <Button Content="Добавить событие" Margin="9,337,0,0" Background="#FF0B1C48" FontSize="15" Foreground="#FFE6E4E4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210"/>
+                <ScrollViewer Margin="9,41,10,39">
+                    <StackPanel x:Name="eventsStackPanel">
+                        
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
         </Border>
-        <Border BorderThickness="1" Margin="538,217,0,0" Background="#FFE0E9FF" HorizontalAlignment="Left" VerticalAlignment="Top" Width="230" Height="177" SizeChanged="onBorderResize">
+        <Border BorderThickness="1" Margin="538,217,0,0" Background="#FFE0E9FF" HorizontalAlignment="Left" VerticalAlignment="Top" Width="230" Height="184" SizeChanged="onBorderResize">
             <Border BorderThickness="1" Margin="9,9,0,0" Background="#FF0B1C48" HorizontalAlignment="Left" VerticalAlignment="Top" Width="209" Height="27" SizeChanged="onBorderResize">
                 <TextBlock x:Name="testBlock" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Foreground="LightGray" Text="Уведомления" FontSize="15" FontFamily="Segoe UI" FontWeight="Normal" Margin="6,1,0,0" FontStyle="Normal" TextDecorations="{x:Null}"/>
             </Border>
