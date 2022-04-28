@@ -1,0 +1,19 @@
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\bin\Debug\netcoreapp3.1\WASP Planner.exe
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\bin\Debug\netcoreapp3.1\WASP Planner.deps.json
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\bin\Debug\netcoreapp3.1\WASP Planner.runtimeconfig.json
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\bin\Debug\netcoreapp3.1\WASP Planner.runtimeconfig.dev.json
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\bin\Debug\netcoreapp3.1\WASP Planner.dll
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\bin\Debug\netcoreapp3.1\WASP Planner.pdb
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner_MarkupCompile.cache
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner_MarkupCompile.lref
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner.g.resources
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner.AssemblyInfoInputs.cache
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner.AssemblyInfo.cs
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner.csproj.CoreCompileInputs.cache
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner.dll
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner.pdb
+C:\Users\Иван\source\repos\WASP Planner\WASP Planner\obj\Debug\netcoreapp3.1\WASP Planner.genruntimeconfig.cache
